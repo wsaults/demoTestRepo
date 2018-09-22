@@ -13,6 +13,24 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
+def build_app
+  project_file = 'testDemoApp.xcodeproj'
+  increment_build_number(xcodeproj: project_file) # version bump
+
+  gym(
+    workspace: 'testDemoApp.xcworkspace',
+    scheme: 'testDemoApp'
+  )
+
+  commit_version_bump(
+    message: 'Version Bump by fastlane',
+    xcodeproj: project_file,
+    force: true
+  )
+
+  push_to_git_remote
+end
+
 default_platform(:ios)
 
 platform :ios do
@@ -22,24 +40,46 @@ platform :ios do
   end
 
   lane :release do
-    capture_screenshots
-    #build_app
+    #capture_screenshots
+    build_app
     #upload_to_app_store       # Upload the screenshots and the binary to iTunes
     #slack                     # Let your team-mates know the new version is live
   end
 
   lane :beta do
-    increment_build_number(
-      build_number: app_store_build_number + 1,
-      xcodeproj: "Example.xcodeproj"
+    #increment_build_number(
+    #  build_number: app_store_build_number + 1,
+    #  xcodeproj: "testDemoApp.xcodeproj"
+    #)
+  end
+
+  lane :test do
+    run_tests(scheme: "testDemoApp")
+  end
+end
+
+################
+# Success/Error:
+################
+
+after_all do |lane|
+  # This block is called, only if the executed lane was successful
+  if ENV["SLACK_URL"]
+    slack(
+      message: "Hurray!!!",
+      success: true,
+      default_payloads: [:test_result, :git_branch]
     )
   end
 
-  lane :unit do
-    run_tests(scheme: "testDemoAppTests")
-  end
+  clean_build_artifacts
+end
 
-  lane :ui do
-    run_tests(scheme: "testDemoAppUITests")
+error do |lane, exception|
+  if ENV["SLACK_URL"]
+    slack(
+      message: exception.to_s,
+      success: false
+    )
   end
 end

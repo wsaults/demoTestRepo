@@ -31,14 +31,9 @@ fastlane ios release
 fastlane ios beta
 ```
 
-### ios unit
+### ios test
 ```
-fastlane ios unit
-```
-
-### ios ui
-```
-fastlane ios ui
+fastlane ios test
 ```
 
 
