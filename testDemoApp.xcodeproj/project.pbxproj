@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00E955A3C4FB02FCDA2DF210 /* Pods_testDemoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4AC41F7C4B9F1220D3D85E /* Pods_testDemoAppUITests.framework */; };
 		12549AC9C1A35AAC6BE4A147 /* Pods_testDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF491E0B10383182C29919AA /* Pods_testDemoApp.framework */; };
+		9342C6BD215604FA00CB4EAD /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9342C6BB2156044F00CB4EAD /* SnapshotHelper.swift */; };
 		938ABCF02155D3AF0072FAC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ABCEF2155D3AF0072FAC8 /* AppDelegate.swift */; };
 		938ABCF22155D3AF0072FAC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ABCF12155D3AF0072FAC8 /* ViewController.swift */; };
 		938ABCF52155D3AF0072FAC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938ABCF32155D3AF0072FAC8 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		6EC3813509670BEA8E3D8211 /* Pods-testDemoAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testDemoAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testDemoAppUITests/Pods-testDemoAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		703C95C16C9D27EE76EF88E5 /* Pods_testDemoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testDemoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA21A3094066B4581D435F5 /* Pods-testDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testDemoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-testDemoApp/Pods-testDemoApp.release.xcconfig"; sourceTree = "<group>"; };
+		9342C6BB2156044F00CB4EAD /* SnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = "<group>"; };
 		938ABCEC2155D3AF0072FAC8 /* testDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		938ABCEF2155D3AF0072FAC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		938ABCF12155D3AF0072FAC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		938ABCE32155D3AF0072FAC8 = {
 			isa = PBXGroup;
 			children = (
+				9342C6BB2156044F00CB4EAD /* SnapshotHelper.swift */,
 				938ABCEE2155D3AF0072FAC8 /* testDemoApp */,
 				938ABD032155D3AF0072FAC8 /* testDemoAppTests */,
 				938ABD0E2155D3AF0072FAC8 /* testDemoAppUITests */,
@@ -302,15 +305,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-testDemoAppTests-checkManifestLockResult.txt",
 			);
@@ -324,15 +323,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-testDemoAppUITests-checkManifestLockResult.txt",
 			);
@@ -346,15 +341,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-testDemoApp-checkManifestLockResult.txt",
 			);
@@ -368,16 +359,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-testDemoAppTests/Pods-testDemoAppTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
@@ -392,16 +379,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-testDemoAppUITests/Pods-testDemoAppUITests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
@@ -435,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9342C6BD215604FA00CB4EAD /* SnapshotHelper.swift in Sources */,
 				938ABD102155D3AF0072FAC8 /* testDemoAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,15 +577,18 @@
 			baseConfigurationReference = DC4ADE53535FEEA3CA9690EE /* Pods-testDemoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 77QB78PHPH;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = Q6T9TG3H55;
 				INFOPLIST_FILE = testDemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appventures.testDemoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AppVentures.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f26aa75a-4267-4392-ba99-c0ad453a72dc";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.AppVentures.*";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -612,15 +599,18 @@
 			baseConfigurationReference = 8AA21A3094066B4581D435F5 /* Pods-testDemoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 77QB78PHPH;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = Q6T9TG3H55;
 				INFOPLIST_FILE = testDemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appventures.testDemoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AppVentures.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "aeab03ff-cad5-40ee-892d-871bdd31a24b";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.AppVentures.*";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -632,6 +622,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77QB78PHPH;
 				INFOPLIST_FILE = testDemoAppTests/Info.plist;
@@ -642,6 +633,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appventures.testDemoAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testDemoApp.app/testDemoApp";
@@ -654,6 +646,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77QB78PHPH;
 				INFOPLIST_FILE = testDemoAppTests/Info.plist;
@@ -664,6 +657,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appventures.testDemoAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testDemoApp.app/testDemoApp";
@@ -675,6 +669,7 @@
 			baseConfigurationReference = 6EC3813509670BEA8E3D8211 /* Pods-testDemoAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77QB78PHPH;
 				INFOPLIST_FILE = testDemoAppUITests/Info.plist;
@@ -685,6 +680,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appventures.testDemoAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = testDemoApp;
@@ -696,6 +692,7 @@
 			baseConfigurationReference = 25460923EA980CC931C2A191 /* Pods-testDemoAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77QB78PHPH;
 				INFOPLIST_FILE = testDemoAppUITests/Info.plist;
@@ -706,6 +703,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appventures.testDemoAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = testDemoApp;
